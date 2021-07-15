@@ -20,7 +20,7 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     serializer_class = UserSerializer
 
     # NOTE: These need to be tuples or a TypeError is thrown.
-    #       Object of type: 'type' cannot be iterated
+    #       Object of type: 'type' is not iterable
     authentication_classes = (authentication.TokenAuthentication,)
     permission_classes = (permissions.IsAuthenticated,)
 
